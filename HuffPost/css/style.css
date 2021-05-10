@@ -174,7 +174,7 @@ body {
 
 #img-login {
     visibility: hidden;
-    width: 50px;
+    width: 7vw;
 }
 
 .bottom-navbar {
@@ -234,7 +234,7 @@ body {
 
 .frontpage-top {
     margin: 0 auto;
-    width: 100%;
+    width: 95%;
     text-align: center;
 }
 
@@ -565,19 +565,42 @@ a.title {
     }
 
     #container-video {
-        width: 100%;
+        width: 90%;
+    }
+
+    #frontpage-row3 {
+        max-width: 95%;
+    }
+
+    #frontpage-row3 .article img {
+        float: none;
     }
 }
 
 @media screen and (max-width: 768px) {
+
     .logo {
         width: 175px;
         padding: 0 10% 0 20%;
     }
 
+    #hidden-menu {
+        display: none;
+    }
+
     #img-login {
         display: list-item;
         visibility: visible;
+    }
+
+    #middle-menu{
+        max-width: 100%;
+    }
+
+    #middle-menu th {
+        max-width: 30%;
+        padding: 0;
+        margin: 0;
     }
 
     #side-menu {
@@ -587,12 +610,25 @@ a.title {
     #footer-container {
         font-size: 2vw;
     }
-    #frontpage-row2,
+
     #frontpage-row3,
     #frontpage-row1 {
-        padding: 0;
+        max-width: 95%;
+    }
+
+    #frontpage-row2 {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 90%;
         margin: 0;
-        max-width: 100%;
+    }
+
+    #frontpage-row1 .article {
+        max-width: 90%;
+    }
+
+    #whats-happening {
+        max-width: 90%;
     }
 
 }

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HuffPost con flexbox e grid</title>
+        <meta name = "description" content="HuffPost - Breaking News, U.S. and World News">
+        <meta name = "keywords" content="News, Politics, Entertainment, Headlines, PPM, website">
+        <meta name = "viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <nav class = "navbar">
+            <div class="top-navbar">
+            </div>
+
+            <div class="middle-navbar">
+                <ul id="middle-menu">
+                    <li>
+                        <div id="toggle-menu">
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="hidden-menu">
+                                <hr>
+                                <li class="header"><a href="#" >CORONAVIRUS</a></li>
+                                <li class="header"><a href="#">NEWS</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header"><a href="#">ENTERTAINMENT</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header"><a href="#">LIFE</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header"><a href="#">COMMUNITIES</a>
+                                    <ul >
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header"><a href="#">SPECIAL PROJECTS</a>
+                                    <ul>
+                                        <li><a href="#">Project 1</a></li>
+
+                                    </ul>
+                                </li>
+                                <hr>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/Logo.png" alt="Logo HuffPost" class="logo"></a>
+                    </li>
+                    <li>
+                        <ul id="side-menu">
+                            <li><a href="#" class="login">Log In</a></li>
+                            <li><a href="#" class="join">Join HuffPost</a></li>
+                        </ul>
+                        <a href="#"><img src="images/LogIn.png" alt="logo" id="img-login"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-navbar">
+                <ul id="bottom-menu">
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">CORONAVIRUS</a></li>
+                    <li><a href="#">POLITICS</a></li>
+                    <li><a href="#">ENTERTAINMENT</a></li>
+                    <li><a href="#">LIFE</a></li>
+                    <li><a href="#">PERSONAL</a></li>
+                    <li><a href="#">VIDEO</a></li>
+                </ul>
+                <ul id="bottom-edition">
+                    <li><a href="#"> U.S. Edition </a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="frontpage-top">
+            <section>
+                <h1><a href="#" id="title">THE MOST RECENT AND IMPORTANT TITLE</a></h1>
+            </section>
+            <section>
+            <a href="#"><img src="https://via.placeholder.com/800x350" alt="Photo of the first article"/></a>
+            </section>
+        </div>
+
+        <div class="frontpage-content">
+            <h2 id="header-top-stories"> <span style="color: blue">/</span> TOP STORIES <span style="color: blue">/</span> </h2>
+            <div id="frontpage-row1">
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/250x150" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/250x150" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/250x150" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/250x150" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/250x150" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/250x150" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                </div>
+            </div>
+            <div id="frontpage-row2">
+                <div id="container-primary">
+                    <h2 id="header-whats-happening"> <span style="color: blue">/</span> WHAT'S HAPPENING <span style="color: blue">/</span> </h2>
+                    <div id="whats-happening">
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/175x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                    </div>
+                    <h2 id="header-personal">HUFFMAN PERSONAL</h2>
+                    <div id="personal">
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                </div>
+                </div>
+                <div id="container-aside">
+                    <h2 id="header-dont-miss"> <span style="color: blue">/</span> DON'T MISS <span style="color: blue">/</span> </h2>
+                    <div id="dont-miss">
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                        <div class="article">
+                            <a href="#" class="img-link"><img src="https://via.placeholder.com/100x100" alt="article"/></a>
+                            <a href="#" class="category"><p> CATEGORY</p></a>
+                            <a href="#" class="title"><p>Title of the article</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="container-video">
+                    <h2> <span style="color: #20b2aa">/</span> TOP VIDEOS <span style="color: #20b2aa">/</span> </h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLS3XGZxi7cBVTzEE4Sim9UuNKnUJq9Vkh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="frontpage-row3">
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/300x200" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                    <p class="description">Small description of the article </p>
+                    <p class="author">BY NAME SURNAME</p>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/300x200" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                    <p class="description">Small description of the article </p>
+                    <p class="author">BY NAME SURNAME</p>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/300x200" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                    <p class="description">Small description of the article </p>
+                    <p class="author">BY NAME SURNAME</p>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/300x200" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                    <p class="description">Small description of the article </p>
+                    <p class="author">BY NAME SURNAME</p>
+                </div>
+                <div class="article">
+                    <a href="#" class="img-link"><img src="https://via.placeholder.com/300x200" alt="article"/></a>
+                    <a href="#" class="category"><p> CATEGORY</p></a>
+                    <a href="#" class="title"><p>Title of the article</p></a>
+                    <p class="description">Small description of the article </p>
+                    <p class="author">BY NAME SURNAME</p>
+                </div>
+            </div>
+            <div id="footer-container">
+                <img src="images/icon.png" alt="icon" id="footer-icon">
+                <div id="footer-menu-primary">
+                    <div><a href="#">NEWS</a></div>
+                    <div><a href="#">CORONAVIRUS</a></div>
+                    <div><a href="#">POLITICS</a></div>
+                    <div><a href="#">ENTERTAINMENT</a></div>
+                    <div><a href="#">LIFE</a></div>
+                    <div><a href="#">VIDEO</a></div>
+                    <div><a href="#">NEWSLETTER</a></div>
+                </div>
+                <div id="footer-menu-secondary">
+                    <div><a href="#">HUFFPOST</a></div>
+                    <div><a href="#">ABOUT US</a></div>
+                    <div><a href="#">CONTACT US</a></div>
+                    <div><a href="#">FAQ</a></div>
+                    <div><a href="#">COMMENT POLICY</a></div>
+                    <div><a href="#">PRIVACY POLICY</a></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

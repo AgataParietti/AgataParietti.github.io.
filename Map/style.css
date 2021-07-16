@@ -1,0 +1,124 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+/* ---- START NAVBAR ---- */
+
+#nav-container {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    clear: both;
+}
+
+/*START BUTTON*/
+.btn-nav {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+.btn-nav label {
+    transition: all 0.3s;
+}
+.btn-nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+.btn-nav:hover label {
+    letter-spacing: 2px;
+}
+.btn-nav:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.btn-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-nav:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+/*END BUTTON*/
+
+#container1 {
+    padding-left: 1%;
+    flex-direction: column;
+    flex: 10%;
+}
+
+#container3 {
+    flex-direction: column;
+    flex: 10%;
+    padding-right: 1% ;
+}
+
+#title {
+    color: #FFFFFF;
+    flex-direction: column;
+    flex: 50%;
+    font-size: 3em;
+    text-align: center;
+}
+
+label {
+    cursor: pointer;
+}
+
+#upload {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#map {
+    flex-direction: row;
+    flex: 80%;
+    width: 100%;
+    height: 90%;
+}
+
+/*START RESPONSIVE*/
+
+
+/*END RESPONSIVE*/

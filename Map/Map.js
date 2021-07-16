@@ -6,7 +6,7 @@ function initMap() {
             lat: -34.397,
             lng: 150.644
         },
-        zoom: 16
+        zoom: 18
     });
     infoWindow = new google.maps.InfoWindow;
     map.setOptions({ styles: styles["hide"] })
@@ -33,63 +33,53 @@ function initMap() {
             //Put request in here there are 3 requests since nearbysearch only has one type to be specified
             var requestAirport = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['airport']
             };
             var requestMuseum = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['museum']
             };
             var requestChurch = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['church']
-            };
-            var requestCityHall = {
-                location: pos,
-                radius: '8000',
-                type: ['city_hall']
             };
             var requestStadium = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['stadium']
             };
             var requestTrainStation = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['train_station']
             };
             var requestUniversity = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['university']
             };
             var requestZoo = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['zoo']
             };
             var requestLibrary = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['library']
             };
             var requestAquarium = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['aquarium']
             };
             var requestArtGallery = {
                 location: pos,
-                radius: '8000',
+                radius: '150',
                 type: ['art_gallery']
-            };
-            var requestSchool = {
-                location: pos,
-                radius: '8000',
-                type: ['school']
             };
 
             //Make Places Service requests here
@@ -97,7 +87,6 @@ function initMap() {
             service.nearbySearch(requestAirport, callback);
             service.nearbySearch(requestMuseum, callback);
             service.nearbySearch(requestChurch, callback);
-            service.nearbySearch(requestCityHall, callback);
             service.nearbySearch(requestStadium, callback);
             service.nearbySearch(requestTrainStation, callback);
             service.nearbySearch(requestUniversity, callback);
@@ -105,7 +94,6 @@ function initMap() {
             service.nearbySearch(requestLibrary, callback);
             service.nearbySearch(requestAquarium, callback);
             service.nearbySearch(requestArtGallery, callback);
-            service.nearbySearch(requestSchool, callback);
 
 
         }, function() {
@@ -141,7 +129,7 @@ function createMarker(place) {
 
 //put marker of the places in the map
     var marker = new google.maps.Marker({
-        url: 'https://agataparietti.github.io/AgataParietti.github.io./Index.html',
+        //url: 'https://agataparietti.github.io/AgataParietti.github.io./Index.html',
         map: map,
         icon: icon,
         position: place.geometry.location
@@ -150,7 +138,8 @@ function createMarker(place) {
     google.maps.event.addListener(marker, 'click', function() {
         infoWindow.setContent(place.name);
         infoWindow.open(map, this);
-        window.location.href = marker.url;
+        //window.location.href = marker.url;
+        getInfo(place.name);
     });
 }
 
@@ -168,3 +157,23 @@ const styles = {
         },
     ],
 };
+
+function getInfo(place) {
+    var request = new XMLHttpRequest();
+    var url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours&key=AIzaSyBMaTcwpfDYyTu8Ok8yeMD62GPswuUMEW4";
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                document.body.className = 'ok';
+                console.log(request.responseText);
+            } else if (request.response == null && request.status === 0) {
+                document.body.className = 'error offline';
+                console.log("The computer appears to be offline.");
+            } else {
+                document.body.className = 'error';
+            }
+        }
+    };
+    request.open("GET", url, true);
+    request.send(null);
+}

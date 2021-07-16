@@ -160,7 +160,7 @@ const styles = {
 
 function getInfo(place) {
     var request = new XMLHttpRequest();
-    var url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours&key=AIzaSyBMaTcwpfDYyTu8Ok8yeMD62GPswuUMEW4";
+    var url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours&key=";
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             if (request.status === 200) {
